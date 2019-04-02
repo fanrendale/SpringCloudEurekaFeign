@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Date: 2019/4/1 22:48
  */
 //调用服务的名称
-@FeignClient(value = "eureka-client")
+@FeignClient(value = "eureka-client",fallback = EurekaFeignServiceFailure.class)
 public interface EurekaFeignService {
 
     /**

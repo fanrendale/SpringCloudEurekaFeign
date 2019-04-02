@@ -3,6 +3,7 @@ package com.xjfe.eurekafeign;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
@@ -10,6 +11,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * 程序入口，服务的使用者
  * @author XJF
  */
+//启用Hystrix熔断机制相关配置
+@EnableHystrix
 //启用Eureka服务发现
 @EnableDiscoveryClient
 //启用Feign
